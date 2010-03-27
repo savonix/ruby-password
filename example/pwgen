@@ -1,0 +1,118 @@
+#!/usr/bin/ruby -w
+#
+# $Id: pwgen,v 1.3 2004/09/04 22:20:27 ianmacd Exp $
+#
+# Copyright (C) 2004 Ian Macdonald
+#
+#   This program is free software; you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation; either version 2, or (at your option)
+#   any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program; if not, write to the Free Software Foundation,
+#   Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+
+
+require 'optparse'
+require 'ostruct'
+require 'password'
+
+
+class Optparse
+
+  USAGE_BANNER = "Usage: pwgen [ OPTIONS ] [ password_length ] [ number_passwords ]"
+
+  def self.parse(args)
+    options = OpenStruct.new
+    options.columns = $stdout.tty?
+    options.one_case = $stdout.tty? ? Password::ONE_CASE : 0
+    options.one_digit = $stdout.tty? ? Password::ONE_DIGIT : 0
+    options.secure = false
+
+    opts = OptionParser.new do |opts|
+      opts.banner = USAGE_BANNER
+
+      opts.on( "-C", "Print the generated passwords in columns") do
+	options.columns = true
+      end
+
+      opts.on( "-1", "Don't print the generated passwords",
+		     "  in columns") do
+	options.columns = false
+      end
+
+      opts.on( "-c", "--[no-]capitalise", "--[no-]capitalize",
+	      "Include at least one capital letter in",
+	      "  the password" ) do |opt|
+	options.one_case = opt ? Password::ONE_CASE : 0
+      end
+
+      opts.on( "-n", "--[no-]numerals",
+	      "Include at least one digit in the password" ) do |opt|
+	options.one_digit = opt ? Password::ONE_DIGIT : 0
+      end
+
+      opts.on( "-s", "--secure", "Generate completely random passwords" ) do
+	options.secure = true
+      end
+
+      opts.on( "-v", "--version", "Display version and exit" ) do
+	puts PWGEN_VERSION
+	exit
+      end
+
+      opts.on_tail( "-h", "--help", "Display this usage message and exit" ) do
+	puts opts
+	exit
+      end
+
+    end
+
+    opts.parse!(args)
+    options
+  end
+end
+
+PWGEN_VERSION = '0.5.2'
+TERM_WIDTH = 80
+
+options = Optparse.parse(ARGV)
+
+unless [ 0, 2 ].include? ARGV.size
+  puts Optparse::USAGE_BANNER
+  exit 1
+end
+
+length, number = *ARGV.map { |arg| arg.to_i }
+length ||= 8
+
+generator = if length < 5 || options.secure
+	      Proc.new { Password.random( length ) }
+	    else
+	      Proc.new { Password.phonemic( length, options.one_case |
+						    options.one_digit ) }
+	    end
+
+columns = options.columns ? TERM_WIDTH / ( length + 1 ) : 1
+columns = 1 if columns == 0
+number ||= options.columns ? columns * 20 : 1
+
+need_new_line = false
+
+0.upto number - 1 do |n|
+  if ! options.columns || n % columns == columns - 1
+    puts generator.call
+    need_new_line = false
+  else
+    print generator.call, ' '
+    need_new_line = true
+  end
+end
+
+puts if need_new_line

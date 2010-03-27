@@ -1,0 +1,140 @@
+$Id: CHANGES,v 1.10 2006/03/02 19:44:13 ianmacd Exp $
+
+
+0.5.3
+-----
+
+No functional changes. The build no longer tries to use packer.h if available.
+crack.h will always be sought and used.
+
+
+0.5.2
+-----
+
+No functional changes. The build environment was modified to search for the
+system dictionary in the additional location of
+/var/cache/cracklib/cracklib_dict.pwd, which is where it is on Debian Linux.
+
+
+0.5.1
+-----
+
+Password.get would throw an exception in the unlikely event that STDIN reached
+EOF without any input. Thanks to Will Drewry <wad@google.com> for pointing
+this out.
+
+pwgen now supports a -v or --version switch.
+
+
+0.5.0
+-----
+
+This is a major update. The user-visible changes between this version and the
+previous, 0.4.1, are as follows:
+
+A new example program, pwgen, has been added, complete with man page. Ted
+Ts'o's C program of the same name inspired this Ruby version. The man page is
+also adapted from his.
+
+A new class method, Password.phonemic, generates phonemic passwords. This,
+too, was inspired by Ted Ts'o's work on pwgen. As its second parameter, it can
+take zero or more new constants, logically OR'ed together. Available constants
+are Password::ONE_DIGIT and Password::ONE_CASE. The former specifies that the
+generated password should contain at least one digit, whilst the latter
+specifies that the password should contain at least one capital letter.
+
+The old Password.random method has been renamed Password.urandom and replaced
+by a new Password.random that does not depend on /dev/urandom, making it much
+more portable. Password.urandom will return nil on platforms that do not
+implement the /dev/urandom device.
+
+Password.get will now detect whether STDIN is connected to a tty. If not, no
+password prompt is displayed and no attempt will be made to manipulate
+terminal echo.
+
+The prompt parameter to Password.get and Password.getc must now be passed in
+its entirety. Previously, the string ': ' would be automatically appended to
+the user-supplied prompt, but this behaviour has been changed in order to
+accommodate null prompts. The default string for the prompt parameter has been
+changed accordingly.
+
+Running password.rb directly will now result in a call to Password.phonemic
+and the display of the resulting password.
+
+The Password::BadDictionary exception has been renamed
+Password::DictionaryError and made a subclass of StandardError instead of
+RuntimeError.
+
+The CryptError exception has been moved to Password::CryptError and is now a
+subclass of StandardError instead of RuntimeError.
+
+A new constant, PASSWD_CHARS, gives the list of characters from which
+automatically generated passwords will be chosen. Note that Password.urandom
+will use the additional characters '+' and '/'.
+
+A new constant, SALT_CHARS, gives the list of characters valid as salt
+characters when invoking Password#crypt.
+
+Password.getc now returns an instance of Password, not String.
+
+Password.random now returns a Password, not a String.
+
+A Password::CryptError exception is now raised if the salt passed to
+Password#crypt contains a bad character.
+
+RDoc documentation has been added. The INSTALL file explains how to build it.
+
+The RD documentation has been removed in favour of the RDoc documentation.
+
+
+0.4.1
+-----
+
+Use of the rb_enable_super() function caused a warning in Ruby 1.8.x. This
+has now been fixed.
+
+
+0.4.0
+-----
+
+When a bad dictionary path is provided to Password#check, a
+Password::BadDictionary exception is now raised.
+
+Turn off Ruby buffering for Password.getc, as this resulted in the prompt not
+being displayed when called by Ruby 1.8.
+
+
+0.3.0
+-----
+
+The Crack class is gone and Password is now a direct subclass of String.  If
+you were previously creating Crack objects and calling their methods, you can
+now no longer do this (and there really never was a good reason to do that,
+anyway).
+
+As a result of this change, Password#check now raises a Password::WeakPassword
+exception if the password is weak, not a Crack::WeakPassword exception.
+
+
+0.2.1
+-----
+
+No new features. The only changes are portability enhancements to the build
+system.
+
+
+0.2.0
+-----
+
+Password#check no longer returns an empty string on success and a string
+describing the nature of the password weakness on failure.
+
+Instead, it returns true on success and raises a Crack::WeakPassword exception
+on failure.
+
+
+0.1.1
+-----
+
+Password.get now returns an instance of Password, not String.
+Password.new now defaults to assigning a null string.

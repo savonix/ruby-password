@@ -1,0 +1,83 @@
+.\" $Id: pwgen.1,v 1.2 2004/04/13 00:01:07 ianmacd Exp $
+.\" 
+.TH PWGEN 1 "April 2004" "pwgen"
+.SH NAME
+pwgen \- generate pronounceable passwords
+.SH SYNOPSIS
+.B pwgen
+[
+.I OPTION
+]
+[
+.I password_length
+]
+[
+.I number_passwords
+]
+.SH DESCRIPTION
+.B pwgen
+generates passwords which are designed to be easily memorised by humans,
+whilst being as secure as possible.
+.PP
+The
+.B pwgen
+program is designed
+to be used both interactively, and in shell scripts. Hence, 
+its default behaviour differs depending on whether the standard output
+is a tty device or a pipe to another program. Used interactively, 
+.B pwgen 
+will display a screenful of passwords, allowing the user to pick a single 
+password, and then quickly erase the screen. This prevents someone from
+being able to "shoulder-surf" the user's chosen password.
+.PP
+When standard output is not a tty, 
+.B pwgen
+will only generate one password, as this tends to be much more convenient
+for shell scripts. This also assures that
+.B pwgen
+is compatible with other versions of this program.
+.B
+.SH OPTIONS
+.TP
+.B \-c, --capitalise, --capitalize
+Include at least one capital letter in the password. This is the default 
+if the standard output is a tty device.
+.TP
+.B \-C
+Print the generated passwords in columns. This is the default if the 
+standard output is a tty device.
+.TP
+.B \-n, --numerals
+Include at least one number in the password. This is the default
+if the standard output is a tty device.
+.TP
+.B \--no-numerals
+Don't include a number in the generated passwords.
+.TP
+.B \--no-capitalise, --no-capitalize
+Don't bother to include any capital letters in the generated passwords.
+.TP
+.B \-s, --secure
+Generate completely random, hard-to-memorise paswords. These should
+only be used for machine passwords, since otherwise it's almost
+guaranteed that users will simply write the password on a piece of 
+paper taped to the monitor...
+.TP
+.B \-v, --version
+Display the program version and exit.
+.TP
+.B \-h, --help
+Display a help message and exit.
+.TP
+.B \-1
+Print the generated passwords one per line.
+.SH AUTHOR
+This version of 
+.B pwgen
+was written by Ian Macdonald <ian@caliban.org>.
+It is modelled after a program originally written by Brandon S. Allbery and
+then later extensively modified by Olaf Titz, Jim Lynch, and others. It was
+later rewritten from scratch by Theodore Ts'o. This man page is lifted largely
+from Theodore Ts'o's man page.
+.SH SEE ALSO
+.BR passwd (1)

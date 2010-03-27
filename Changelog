@@ -1,0 +1,840 @@
+? Changelog
+
+RCS file: /var/cvs/ruby-password/CHANGES,v
+Working file: CHANGES
+head: 1.10
+branch:
+locks: strict
+access list:
+symbolic names:
+	v0-5-3: 1.10
+	v0-5-2: 1.9
+	v0-5-1: 1.7
+	v0-5-0: 1.5
+	v0-4-1: 1.4
+	v0-4-0: 1.3
+	v0-3-0: 1.2
+	v0-2-0: 1.1
+keyword substitution: kv
+total revisions: 10;	selected revisions: 10
+description:
+----------------------------
+revision 1.10
+date: 2006/03/02 19:44:13;  author: ianmacd;  state: Exp;  lines: +8 -2
+
+Updated for 0.5.3.
+----------------------------
+revision 1.9
+date: 2004/09/04 22:20:27;  author: ianmacd;  state: Exp;  lines: +2 -2
+
+- update to 0.5.2
+----------------------------
+revision 1.8
+date: 2004/09/04 22:16:47;  author: ianmacd;  state: Exp;  lines: +9 -1
+
+- updated to 0.5.2
+----------------------------
+revision 1.7
+date: 2004/04/13 00:02:04;  author: ianmacd;  state: Exp;  lines: +3 -1
+
+- one last change for 0.5.1
+----------------------------
+revision 1.6
+date: 2004/04/12 23:36:55;  author: ianmacd;  state: Exp;  lines: +9 -1
+
+- updated for 0.5.1
+----------------------------
+revision 1.5
+date: 2004/04/09 08:28:45;  author: ianmacd;  state: Exp;  lines: +68 -1
+
+- updated for 0.5.0
+----------------------------
+revision 1.4
+date: 2003/11/12 09:25:40;  author: ianmacd;  state: Exp;  lines: +7 -1
+
+- warning in Ruby 1.8.x caused by use of rb_enable_super() has been fixed
+----------------------------
+revision 1.3
+date: 2003/06/11 06:43:58;  author: ianmacd;  state: Exp;  lines: +13 -4
+
+- update version to 0.4.0
+----------------------------
+revision 1.2
+date: 2002/10/03 05:46:10;  author: ianmacd;  state: Exp;  lines: +21 -4
+
+- updates for 0.3.0
+----------------------------
+revision 1.1
+date: 2002/09/18 07:36:43;  author: ianmacd;  state: Exp;
+
+- initial check-in
+=============================================================================
+
+RCS file: /var/cvs/ruby-password/INSTALL,v
+Working file: INSTALL
+head: 1.3
+branch:
+locks: strict
+access list:
+symbolic names:
+	v0-5-3: 1.3
+	v0-5-2: 1.3
+	v0-5-1: 1.3
+	v0-5-0: 1.3
+	v0-4-1: 1.2
+	v0-4-0: 1.2
+	v0-3-0: 1.2
+	v0-2-0: 1.2
+keyword substitution: kv
+total revisions: 3;	selected revisions: 3
+description:
+----------------------------
+revision 1.3
+date: 2004/04/07 09:29:03;  author: ianmacd;  state: Exp;  lines: +7 -11
+
+- updated
+----------------------------
+revision 1.2
+date: 2002/06/18 23:58:16;  author: ianmacd;  state: Exp;  lines: +11 -1
+
+- add piece on generating and installing documentation
+----------------------------
+revision 1.1
+date: 2002/06/18 22:18:38;  author: ianmacd;  state: Exp;
+
+- first versions
+=============================================================================
+
+RCS file: /var/cvs/ruby-password/README,v
+Working file: README
+head: 1.5
+branch:
+locks: strict
+access list:
+symbolic names:
+	v0-5-3: 1.5
+	v0-5-2: 1.5
+	v0-5-1: 1.5
+	v0-5-0: 1.5
+	v0-4-1: 1.3
+	v0-4-0: 1.3
+	v0-3-0: 1.3
+	v0-2-0: 1.3
+keyword substitution: kv
+total revisions: 5;	selected revisions: 5
+description:
+----------------------------
+revision 1.5
+date: 2004/04/07 09:42:48;  author: ianmacd;  state: Exp;  lines: +8 -4
+
+- updated
+----------------------------
+revision 1.4
+date: 2004/04/07 09:25:51;  author: ianmacd;  state: Exp;  lines: +5 -6
+
+- updated
+----------------------------
+revision 1.3
+date: 2002/06/19 06:26:19;  author: ianmacd;  state: Exp;  lines: +6 -1
+
+- add small section on target audience
+----------------------------
+revision 1.2
+date: 2002/06/18 23:20:49;  author: ianmacd;  state: Exp;  lines: +13 -1
+
+- add section on licence
+----------------------------
+revision 1.1
+date: 2002/06/18 22:18:38;  author: ianmacd;  state: Exp;
+
+- first versions
+=============================================================================
+
+RCS file: /var/cvs/ruby-password/extconf.rb,v
+Working file: extconf.rb
+head: 1.13
+branch:
+locks: strict
+access list:
+symbolic names:
+	v0-5-3: 1.13
+	v0-5-2: 1.12
+	v0-5-1: 1.11
+	v0-5-0: 1.11
+	v0-4-1: 1.8
+	v0-4-0: 1.8
+	v0-3-0: 1.8
+	v0-2-0: 1.7
+	standard: 1.1.1.1
+	default: 1.1.1
+keyword substitution: kv
+total revisions: 14;	selected revisions: 14
+description:
+----------------------------
+revision 1.13
+date: 2006/03/02 17:35:06;  author: ianmacd;  state: Exp;  lines: +2 -3
+
+Cannot build with packer.h. Scrap it.
+----------------------------
+revision 1.12
+date: 2004/09/04 01:46:24;  author: ianmacd;  state: Exp;  lines: +2 -1
+
+- add /var/cache/cracklib/cracklib_dict.pwd to search path for dictionaries
+  (this is the location for Debian Linux systems)
+----------------------------
+revision 1.11
+date: 2004/04/09 08:27:16;  author: ianmacd;  state: Exp;  lines: +2 -2
+
+- make rm recursive to get doc/ directory
+----------------------------
+revision 1.10
+date: 2004/04/09 07:53:56;  author: ianmacd;  state: Exp;  lines: +6 -1
+
+- make a test target for running the unit tests
+----------------------------
+revision 1.9
+date: 2004/04/08 09:17:53;  author: ianmacd;  state: Exp;  lines: +5 -12
+
+- update for RDoc documentation; RD docs are gone now
+----------------------------
+revision 1.8
+date: 2002/09/20 05:05:55;  author: ianmacd;  state: Exp;  lines: +28 -17
+
+- portability enhancements from Akinori MUSHA <knu@iDaemons.org>
+----------------------------
+revision 1.7
+date: 2002/06/19 00:29:52;  author: ianmacd;  state: Exp;  lines: +4 -10
+
+- no need to avoid linking against libruby - my Ruby was broken
+----------------------------
+revision 1.6
+date: 2002/06/18 23:49:13;  author: ianmacd;  state: Exp;  lines: +2 -5
+
+- avoid append operation to add extra targets
+----------------------------
+revision 1.5
+date: 2002/06/18 23:36:46;  author: ianmacd;  state: Exp;  lines: +5 -6
+
+- use in-place editing to get rid of $(RUBY_INSTALL_NAME)
+----------------------------
+revision 1.4
+date: 2002/06/18 23:21:51;  author: ianmacd;  state: Exp;  lines: +2 -2
+
+- delete doc files when running extra-clean target
+----------------------------
+revision 1.3
+date: 2002/06/18 23:05:13;  author: ianmacd;  state: Exp;  lines: +9 -6
+
+- this code to remove the reference to libruby actually works
+----------------------------
+revision 1.2
+date: 2002/06/18 22:51:29;  author: ianmacd;  state: Exp;  lines: +19 -2
+
+- add some more Makefile targets
+- attempt in-place editing to remove $(RUBY_INSTALL_NAME) from LIBS, since
+  that makes us link to libruby, which makes our binary unnecessarily large
+  (unfortunately, this in-place edit doesn't work)
+----------------------------
+revision 1.1
+date: 2002/06/18 08:26:46;  author: ianmacd;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2002/06/18 08:26:46;  author: ianmacd;  state: Exp;  lines: +0 -0
+
+- initial check-in
+=============================================================================
+
+RCS file: /var/cvs/ruby-password/pwgen.1,v
+Working file: pwgen.1
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+	v0-5-3: 1.2
+	v0-5-2: 1.2
+	v0-5-1: 1.2
+	v0-5-0: 1.1
+keyword substitution: kv
+total revisions: 2;	selected revisions: 2
+description:
+----------------------------
+revision 1.2
+date: 2004/04/13 00:01:07;  author: ianmacd;  state: Exp;  lines: +5 -2
+
+- document -v|--version
+----------------------------
+revision 1.1
+date: 2004/04/08 09:02:20;  author: ianmacd;  state: Exp;
+
+- man page for pwgen
+=============================================================================
+
+RCS file: /var/cvs/ruby-password/rbcrack.c,v
+Working file: rbcrack.c
+head: 1.20
+branch:
+locks: strict
+access list:
+symbolic names:
+	v0-5-3: 1.20
+	v0-5-2: 1.18
+	v0-5-1: 1.17
+	v0-5-0: 1.16
+	v0-4-1: 1.11
+	v0-4-0: 1.10
+	v0-3-0: 1.8
+	v0-2-0: 1.3
+	standard: 1.1.1.1
+	default: 1.1.1
+keyword substitution: kv
+total revisions: 21;	selected revisions: 21
+description:
+----------------------------
+revision 1.20
+date: 2006/03/02 19:41:44;  author: ianmacd;  state: Exp;  lines: +3 -3
+
+Update copyright messages.
+----------------------------
+revision 1.19
+date: 2006/03/02 17:35:06;  author: ianmacd;  state: Exp;  lines: +1 -6
+
+Cannot build with packer.h. Scrap it.
+----------------------------
+revision 1.18
+date: 2004/09/04 22:20:27;  author: ianmacd;  state: Exp;  lines: +2 -2
+
+- update to 0.5.2
+----------------------------
+revision 1.17
+date: 2004/04/12 23:53:07;  author: ianmacd;  state: Exp;  lines: +2 -2
+
+- bumped to version 0.5.1
+----------------------------
+revision 1.16
+date: 2004/04/07 09:00:00;  author: ianmacd;  state: Exp;  lines: +15 -2
+
+- document Password#check
+----------------------------
+revision 1.15
+date: 2004/04/06 10:15:31;  author: ianmacd;  state: Exp;  lines: +45 -43
+
+- run through indent
+----------------------------
+revision 1.14
+date: 2004/04/06 10:13:52;  author: ianmacd;  state: Exp;  lines: +1 -6
+
+- don't define Password::VERSION here. Define it in password.rb instead
+----------------------------
+revision 1.13
+date: 2004/04/06 10:09:54;  author: ianmacd;  state: Exp;  lines: +7 -12
+
+- rename BadDictionary exception to DictionaryError and make it a subclass
+  of StandardError instead of RuntimeError
+- make WeakPassword exception a subclass of StandardError instead of
+  RuntimeError
+----------------------------
+revision 1.12
+date: 2004/04/06 09:40:17;  author: ianmacd;  state: Exp;  lines: +4 -17
+
+- remove passwd_init (Password#initialize) from here, as it's now implicitly
+  done in password.rb, by having the Password class be a subclass of String.
+- bump version to 0.5.0
+----------------------------
+revision 1.11
+date: 2003/11/12 09:25:40;  author: ianmacd;  state: Exp;  lines: +5 -3
+
+- warning in Ruby 1.8.x caused by use of rb_enable_super() has been fixed
+----------------------------
+revision 1.10
+date: 2003/06/11 06:43:58;  author: ianmacd;  state: Exp;  lines: +3 -3
+
+- update version to 0.4.0
+----------------------------
+revision 1.9
+date: 2002/10/03 22:44:42;  author: ianmacd;  state: Exp;  lines: +28 -4
+
+- in passwd_check(), raise a Password:BadDictionary exception when the path
+  to the crack dictionary is incorrect.
+----------------------------
+revision 1.8
+date: 2002/10/03 05:19:51;  author: ianmacd;  state: Exp;  lines: +19 -19
+
+- dispense with Crack class; use only Password
+----------------------------
+revision 1.7
+date: 2002/09/28 20:07:05;  author: ianmacd;  state: Exp;  lines: +2 -2
+
+- version number updates
+----------------------------
+revision 1.6
+date: 2002/09/28 20:03:14;  author: ianmacd;  state: Exp;  lines: +2 -2
+
+- update version to 0.2.1
+----------------------------
+revision 1.5
+date: 2002/09/24 00:17:50;  author: ianmacd;  state: Exp;  lines: +20 -2
+
+- add GPL header
+----------------------------
+revision 1.4
+date: 2002/09/20 05:05:55;  author: ianmacd;  state: Exp;  lines: +9 -2
+
+- portability enhancements from Akinori MUSHA <knu@iDaemons.org>
+----------------------------
+revision 1.3
+date: 2002/09/18 07:45:57;  author: ianmacd;  state: Exp;  lines: +2 -2
+
+- update version number
+----------------------------
+revision 1.2
+date: 2002/09/18 07:27:37;  author: ianmacd;  state: Exp;  lines: +17 -6
+
+- make Crack#check return true on success, raise exception on failure
+----------------------------
+revision 1.1
+date: 2002/06/18 08:26:46;  author: ianmacd;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2002/06/18 08:26:46;  author: ianmacd;  state: Exp;  lines: +0 -0
+
+- initial check-in
+=============================================================================
+
+RCS file: /var/cvs/ruby-password/ruby-password.spec,v
+Working file: ruby-password.spec
+head: 1.20
+branch:
+locks: strict
+access list:
+symbolic names:
+	v0-5-3: 1.20
+	v0-5-2: 1.19
+	v0-5-1: 1.18
+	v0-5-0: 1.16
+	v0-4-1: 1.14
+	v0-4-0: 1.13
+	v0-3-0: 1.10
+	v0-2-0: 1.6
+keyword substitution: kv
+total revisions: 20;	selected revisions: 20
+description:
+----------------------------
+revision 1.20
+date: 2006/03/02 19:44:13;  author: ianmacd;  state: Exp;  lines: +6 -2
+
+Updated for 0.5.3.
+----------------------------
+revision 1.19
+date: 2004/09/04 22:20:27;  author: ianmacd;  state: Exp;  lines: +8 -2
+
+- update to 0.5.2
+----------------------------
+revision 1.18
+date: 2004/04/13 00:02:53;  author: ianmacd;  state: Exp;  lines: +2 -1
+
+- one last change to document
+----------------------------
+revision 1.17
+date: 2004/04/12 23:38:44;  author: ianmacd;  state: Exp;  lines: +7 -2
+
+- updated version and changelog
+----------------------------
+revision 1.16
+date: 2004/04/09 09:44:42;  author: ianmacd;  state: Exp;  lines: +2 -2
+
+- pwgen was installed with the wrong mode
+----------------------------
+revision 1.15
+date: 2004/04/09 09:18:48;  author: ianmacd;  state: Exp;  lines: +61 -16
+
+- update version and changelog
+----------------------------
+revision 1.14
+date: 2003/11/12 09:25:40;  author: ianmacd;  state: Exp;  lines: +6 -2
+
+- warning in Ruby 1.8.x caused by use of rb_enable_super() has been fixed
+----------------------------
+revision 1.13
+date: 2003/06/11 06:52:35;  author: ianmacd;  state: Exp;  lines: +8 -2
+
+- determine version of Ruby to require at build time
+----------------------------
+revision 1.12
+date: 2003/06/11 06:43:58;  author: ianmacd;  state: Exp;  lines: +12 -5
+
+- update version to 0.4.0
+----------------------------
+revision 1.11
+date: 2003/03/29 22:01:42;  author: ianmacd;  state: Exp;  lines: +3 -3
+
+- fix a gsub for 1.8
+----------------------------
+revision 1.10
+date: 2002/10/03 06:03:21;  author: ianmacd;  state: Exp;  lines: +2 -2
+
+- no TODO file
+----------------------------
+revision 1.9
+date: 2002/10/03 05:48:59;  author: ianmacd;  state: Exp;  lines: +10 -4
+
+- update version and changelog
+----------------------------
+revision 1.8
+date: 2002/09/28 20:09:21;  author: ianmacd;  state: Exp;  lines: +2 -2
+
+- typo in date
+----------------------------
+revision 1.7
+date: 2002/09/28 20:07:05;  author: ianmacd;  state: Exp;  lines: +6 -2
+
+- version number updates
+----------------------------
+revision 1.6
+date: 2002/09/18 07:39:30;  author: ianmacd;  state: Exp;  lines: +9 -4
+
+- updated version and changelog
+----------------------------
+revision 1.5
+date: 2002/07/11 05:37:19;  author: ianmacd;  state: Exp;  lines: +7 -2
+
+- update release to 0.1.1
+----------------------------
+revision 1.4
+date: 2002/06/19 00:29:52;  author: ianmacd;  state: Exp;  lines: +1 -2
+
+- no need to avoid linking against libruby - my Ruby was broken
+----------------------------
+revision 1.3
+date: 2002/06/19 00:03:30;  author: ianmacd;  state: Exp;  lines: +2 -2
+
+- don't bother making docs; we'll just add them to the tar file
+----------------------------
+revision 1.2
+date: 2002/06/19 00:01:26;  author: ianmacd;  state: Exp;  lines: +6 -3
+
+- package documentation as well
+----------------------------
+revision 1.1
+date: 2002/06/18 09:21:28;  author: ianmacd;  state: Exp;
+
+- initial check-in of .spec file
+=============================================================================
+
+RCS file: /var/cvs/ruby-password/example/example.rb,v
+Working file: example/example.rb
+head: 1.7
+branch:
+locks: strict
+access list:
+symbolic names:
+	v0-5-3: 1.7
+	v0-5-2: 1.7
+	v0-5-1: 1.7
+	v0-5-0: 1.7
+	v0-4-1: 1.6
+	v0-4-0: 1.6
+	v0-3-0: 1.6
+	v0-2-0: 1.3
+	standard: 1.1.1.1
+	default: 1.1.1
+keyword substitution: kv
+total revisions: 8;	selected revisions: 8
+description:
+----------------------------
+revision 1.7
+date: 2004/04/07 09:49:06;  author: ianmacd;  state: Exp;  lines: +9 -11
+
+- no longer need to call Password.new on strings fetched with Password.get and
+  Password.getc.
+----------------------------
+revision 1.6
+date: 2002/10/03 05:54:35;  author: ianmacd;  state: Exp;  lines: +3 -3
+
+- return Password::WeakPassword on weak password
+----------------------------
+revision 1.5
+date: 2002/09/24 00:29:20;  author: ianmacd;  state: Exp;  lines: +17 -1
+
+- add GPL header
+----------------------------
+revision 1.4
+date: 2002/09/20 00:39:50;  author: ianmacd;  state: Exp;  lines: +6 -1
+
+- don't reask for password with Password.get if password with Password.getc
+  fails
+----------------------------
+revision 1.3
+date: 2002/09/18 07:23:57;  author: ianmacd;  state: Exp;  lines: +12 -13
+
+- modifications in line with changes to Password#check
+----------------------------
+revision 1.2
+date: 2002/06/18 23:21:27;  author: ianmacd;  state: Exp;  lines: +2 -2
+
+- use MD5 on Linux, otherwise DES
+----------------------------
+revision 1.1
+date: 2002/06/18 08:26:46;  author: ianmacd;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2002/06/18 08:26:46;  author: ianmacd;  state: Exp;  lines: +0 -0
+
+- initial check-in
+=============================================================================
+
+RCS file: /var/cvs/ruby-password/example/pwgen,v
+Working file: example/pwgen
+head: 1.3
+branch:
+locks: strict
+access list:
+symbolic names:
+	v0-5-3: 1.3
+	v0-5-2: 1.3
+	v0-5-1: 1.2
+	v0-5-0: 1.1
+keyword substitution: kv
+total revisions: 3;	selected revisions: 3
+description:
+----------------------------
+revision 1.3
+date: 2004/09/04 22:20:27;  author: ianmacd;  state: Exp;  lines: +2 -2
+
+- update to 0.5.2
+----------------------------
+revision 1.2
+date: 2004/04/12 23:59:30;  author: ianmacd;  state: Exp;  lines: +8 -3
+
+- add a -v|--version option
+----------------------------
+revision 1.1
+date: 2004/04/08 08:47:57;  author: ianmacd;  state: Exp;
+
+- Ruby version of Ted Ts'o's pwgen program
+=============================================================================
+
+RCS file: /var/cvs/ruby-password/lib/password.rb,v
+Working file: lib/password.rb
+head: 1.24
+branch:
+locks: strict
+access list:
+symbolic names:
+	v0-5-3: 1.24
+	v0-5-2: 1.22
+	v0-5-1: 1.21
+	v0-5-0: 1.19
+	v0-4-1: 1.13
+	v0-4-0: 1.12
+	v0-3-0: 1.9
+	v0-2-0: 1.6
+	standard: 1.1.1.1
+	default: 1.1.1
+keyword substitution: kv
+total revisions: 25;	selected revisions: 25
+description:
+----------------------------
+revision 1.24
+date: 2006/03/02 19:42:33;  author: ianmacd;  state: Exp;  lines: +2 -2
+
+Update to 0.5.3.
+----------------------------
+revision 1.23
+date: 2006/03/02 19:41:44;  author: ianmacd;  state: Exp;  lines: +3 -3
+
+Update copyright messages.
+----------------------------
+revision 1.22
+date: 2004/09/04 22:20:27;  author: ianmacd;  state: Exp;  lines: +3 -3
+
+- update to 0.5.2
+----------------------------
+revision 1.21
+date: 2004/04/12 23:53:07;  author: ianmacd;  state: Exp;  lines: +3 -3
+
+- bumped to version 0.5.1
+----------------------------
+revision 1.20
+date: 2004/04/12 08:49:08;  author: ianmacd;  state: Exp;  lines: +4 -3
+
+- ensure that Password.get does not fail when $stdin reaches EOF with no
+  input.
+----------------------------
+revision 1.19
+date: 2004/04/08 09:48:38;  author: ianmacd;  state: Exp;  lines: +21 -8
+
+- Password.get will now detect whether STDIN is connected to a tty. If not, no
+  password prompt is displayed and no attempt will be made to manipulate
+  terminal echo.
+- Running password.rb directly will now result in a call to Password.phonemic
+  and the display of the password returned.
+----------------------------
+revision 1.18
+date: 2004/04/07 09:03:14;  author: ianmacd;  state: Exp;  lines: +39 -107
+
+- Remove old RD documentation.
+- Bump version to 0.5.0.
+- Improve RDoc documentation with examples.
+- Duplicate exception definitions for DictionaryError and WeakPassword from
+  rbcrack.c, so that they can be properly documented here.
+- Fixed a reference to non-existent local variable 'output', which should have
+  been 'crypt'.
+----------------------------
+revision 1.17
+date: 2004/04/07 07:55:56;  author: ianmacd;  state: Exp;  lines: +68 -43
+
+- Password::VERSION is now defined here, rather than in rbcrack.c.
+- Make Password class a subclass of String.
+- CryptError is now Password::CryptError and is a subclass of StandardError,
+  not RuntimeError.
+- VALID_CHARS has been renamed PASSWD_CHARS.
+- A new constant, SALT_CHARS, lists the characters valid as salt characters
+  when invoking #crypt.
+- Password.getc now returns a Password, not a String.
+- Password.phonemic now returns a Password, not a String.
+- Password.random now returns a Password, not a String.
+- Password.urandom now returns a Password, not a String.
+- Password::CryptError is now raised if a salt passed to #crypt contains a bad
+  character.
+----------------------------
+revision 1.16
+date: 2004/04/06 08:18:56;  author: ianmacd;  state: Exp;  lines: +112 -96
+
+- Shuffle things around a bit.
+----------------------------
+revision 1.15
+date: 2004/04/06 07:58:45;  author: ianmacd;  state: Exp;  lines: +75 -23
+
+- Improve RDoc documentation
+- Alter Password.get and Password.getc so that the prompt is passed in its
+  entirety when required. We no longer append ': ' to it, so that completely
+  null prompts are now possible.
+----------------------------
+revision 1.14
+date: 2004/04/05 02:44:37;  author: ianmacd;  state: Exp;  lines: +198 -8
+
+- new class method, Password.phonemic, generates phonemic passwords
+  (code inspired by Ted Ts'o's pwgen program:
+  http://sourceforge.net/projects/pwgen/). This uses some new constants
+  and another class method, Password.get_vowel_or_consonant
+- rename Password.random to Password.urandom for historical purposes
+- new Password.random implementation does not rely on /dev/urandom, and
+  so is portable.
+----------------------------
+revision 1.13
+date: 2003/11/12 09:25:40;  author: ianmacd;  state: Exp;  lines: +3 -3
+
+- warning in Ruby 1.8.x caused by use of rb_enable_super() has been fixed
+----------------------------
+revision 1.12
+date: 2003/06/11 06:43:58;  author: ianmacd;  state: Exp;  lines: +3 -3
+
+- update version to 0.4.0
+----------------------------
+revision 1.11
+date: 2003/06/11 00:17:28;  author: ianmacd;  state: Exp;  lines: +12 -3
+
+- in Password.getc, we need to turn off line buffering for Ruby 1.8, or
+  the password prompt may not appear
+----------------------------
+revision 1.10
+date: 2002/10/03 22:47:01;  author: ianmacd;  state: Exp;  lines: +5 -4
+
+- documentation changes to indicate that a Password::BadDictionary exception
+  is now raised when a bad dictionary path is passed to Password#check
+----------------------------
+revision 1.9
+date: 2002/10/03 05:27:02;  author: ianmacd;  state: Exp;  lines: +6 -14
+
+- with the Crack class gone, Password is now a direct subclass of String
+- the Password.initialize and Password#check methods are no longer
+  needed here, since the ones in rbcrack.c now pertain to the Password class
+- Password#check now raises a Password::WeakPassword exception if the
+  password is weak, not a Crack::WeakPassword exception
+----------------------------
+revision 1.8
+date: 2002/09/28 20:07:05;  author: ianmacd;  state: Exp;  lines: +3 -3
+
+- version number updates
+----------------------------
+revision 1.7
+date: 2002/09/24 18:23:07;  author: ianmacd;  state: Exp;  lines: +7 -6
+
+- format GNU message for man page
+----------------------------
+revision 1.6
+date: 2002/09/18 07:22:55;  author: ianmacd;  state: Exp;  lines: +11 -11
+
+- Password#check now returns true on success and raises a Crack::WeakPassword
+  exception on failure.
+----------------------------
+revision 1.5
+date: 2002/07/11 05:20:09;  author: ianmacd;  state: Exp;  lines: +3 -3
+
+- update version to 0.1.1
+----------------------------
+revision 1.4
+date: 2002/07/10 04:02:02;  author: ianmacd;  state: Exp;  lines: +3 -3
+
+- default to assigning a null string when Password.new is called, to avoid
+  this having to be passed by the user
+----------------------------
+revision 1.3
+date: 2002/07/09 18:53:07;  author: ianmacd;  state: Exp;  lines: +6 -6
+
+- Password.get now returns an instance of Password, not String
+----------------------------
+revision 1.2
+date: 2002/06/18 22:19:47;  author: ianmacd;  state: Exp;  lines: +95 -11
+
+- added a lot of embedded documentation, renamed some variables for
+  clarity, and performed some very minor code clean-up
+----------------------------
+revision 1.1
+date: 2002/06/18 08:26:46;  author: ianmacd;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2002/06/18 08:26:46;  author: ianmacd;  state: Exp;  lines: +0 -0
+
+- initial check-in
+=============================================================================
+
+RCS file: /var/cvs/ruby-password/test/tc_password.rb,v
+Working file: test/tc_password.rb
+head: 1.3
+branch:
+locks: strict
+access list:
+symbolic names:
+	v0-5-3: 1.3
+	v0-5-2: 1.3
+	v0-5-1: 1.3
+	v0-5-0: 1.2
+keyword substitution: kv
+total revisions: 3;	selected revisions: 3
+description:
+----------------------------
+revision 1.3
+date: 2004/04/12 08:50:06;  author: ianmacd;  state: Exp;  lines: +7 -2
+
+- add a test for null $stdin
+----------------------------
+revision 1.2
+date: 2004/04/09 07:21:49;  author: ianmacd;  state: Exp;  lines: +2 -2
+
+- modify path to make sure crack.so gets found before installation
+----------------------------
+revision 1.1
+date: 2004/04/07 09:19:18;  author: ianmacd;  state: Exp;
+
+- initial set of unit tests
+=============================================================================

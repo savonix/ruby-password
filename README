@@ -1,0 +1,57 @@
+$Id: README,v 1.5 2004/04/07 09:42:48 ianmacd Exp $
+
+
+WHAT IS IT?
+-----------
+
+Ruby/Password is a suite of password handling methods for Ruby. It supports
+the manual entry of passwords from the keyboard in both buffered and
+unbuffered modes, password strength checking, random password generation,
+phonemic password generation (for easy memorisation by human-beings) and the
+encryption of passwords.
+
+The common CrackLib library is used to perform password strength checking.
+
+From the CrackLib README:
+
+  CrackLib makes literally hundreds of tests to determine whether you've
+  chosen a bad password.
+
+  * It tries to generate words from your username and GECOS entry and tries
+    to match them against the password you've chosen.
+
+  * It checks for simplistic patterns.
+
+  * It then tries to reverse-engineer your password into a dictionary
+    word, and searches for it in your dictionary.
+
+  - after all that, it's PROBABLY a safe(-ish) password.  8-)
+
+
+The target audience for this library is system administrators who need
+to write Ruby programs that prompt for, generate, verify and encrypt
+passwords.
+
+
+INSTALLATION
+------------
+
+Please see the INSTALL file for details of how to install Ruby/Password.
+
+
+USAGE
+-----
+
+Please see the RDoc documentation for details of how to use Ruby/Password.
+
+
+LICENCE
+-------
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2, or (at your option)
+any later version.
+
+Please see the file COPYING for the terms of the licence.
+
