@@ -324,9 +324,8 @@ class Password < String
 
 	# Handle ONE_DIGIT
 	if feature_flags.include? ONE_DIGIT
-
 	  if ! first and rand( 10 ) < 3
-	    pw << ( rand( 10 ) + ?0 ).chr
+	    pw << ( rand( 10 ) + ?0.ord ).chr
 	    feature_flags.delete ONE_DIGIT
 
 	    first = true

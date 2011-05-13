@@ -59,12 +59,12 @@ static VALUE passwd_check(VALUE self, VALUE args)
     /* pop the one and only argument we may have been passed */
     dict = rb_ary_pop(args);
 
-    if (dict == Qnil || strcmp(STR2CSTR(dict), "") == 0) {
+    if (dict == Qnil || strcmp(StringValuePtr(dict), "") == 0) {
 	/* no argument passed, so use default location from rbcrack.h */
 	dict = rb_str_new2(CRACK_DICT);
     } else {
-	buffer = malloc(strlen(STR2CSTR(dict)) + 8);
-	strcpy(buffer, STR2CSTR(dict));
+	buffer = malloc(strlen(StringValuePtr(dict)) + 8);
+	strcpy(buffer, StringValuePtr(dict));
 	strcat(buffer, ".pwd");
 
 	if (access(buffer, R_OK) != 0) {
@@ -77,7 +77,7 @@ static VALUE passwd_check(VALUE self, VALUE args)
     }
 
     /* perform check on password */
-    objection = FascistCheck(STR2CSTR(self), STR2CSTR(dict));
+    objection = FascistCheck(StringValuePtr(self), StringValuePtr(dict));
 
     /* return true on success; raise an exception otherwise */
     if (objection) {
