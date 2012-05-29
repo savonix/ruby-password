@@ -12,6 +12,7 @@ search_dicts = %w(
   /usr/lib/cracklib_dict.pwd
   /opt/lib/cracklib_dict.pwd
   /var/cache/cracklib/cracklib_dict.pwd
+  /usr/local/libdata/cracklib/pw_dict.pwd
 )
 
 if dict = with_config('crack-dict')
